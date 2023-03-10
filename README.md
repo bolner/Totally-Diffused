@@ -6,7 +6,7 @@ Debian/NVIDIA Docker container for [AUTOMATIC1111](https://github.com/AUTOMATIC1
 1. Download and install this 11.7 CUDA driver on the host mashine. If you have newer version installed, then downgrade, because 11.7 is currently the only version which is supported by most libraries involved. Execute as root:
 ```
 # wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb
-# dpkg -i cuda-repo-debian11-11-7-local_11.7.0-515.43.# 04-1_amd64.deb
+# dpkg -i cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb
 # cp /var/cuda-repo-debian11-11-7-local/cuda-*-keyring.gpg /usr/share/keyrings/
 # add-apt-repository contrib
 # apt-get update
@@ -22,7 +22,7 @@ Do not delete the `.deb` file yet, because it can be used for the guest install 
 git clone https://github.com/bolner/Totally-Diffused.git
 ```
 
-3. To avoid downloading the CUDA 11.7 driver again, create an `install` folder in the same directory as where this README file is located, and copy the `cuda-repo-debian11-11-7-local_11.7.0-515.43.# 04-1_amd64.deb` file there. (If you skip this, then it will be downloaded automatically.)
+3. To avoid downloading the CUDA 11.7 driver again, create an `install` folder in the same directory as where this README file is located, and copy the `cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb` file there. (If you skip this, then it will be downloaded automatically.)
 
 4. Then build the image, create the container and start the application with:
 ```
