@@ -1,5 +1,5 @@
 
-Debian/NVIDIA Docker image for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application.
+Debian/NVIDIA Docker image for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. Supports Dreambooth.
 
 # Installation
 
@@ -32,7 +32,7 @@ $ ./run.sh
 
 # Management
 
-The project folder is shared with host, which allows easy access to models or training datasets. It is mapped to `/var/totally-diffused`. The AUTOMATIC1111 WebUI is also placed inside the project folder after installed.
+The project folder is shared with the host, which allows easy access to models or training datasets. It is mapped to `/var/totally-diffused` inside the container. The AUTOMATIC1111 WebUI is also placed inside the project folder after installed, at `/var/totally-diffused/stable-diffusion-webui`.
 
 The container is always running. You can stop and start it with:
 ```
@@ -47,4 +47,3 @@ When it is running, you can:
 - Delete the totally-diffused image, the container and do a global prune that deletes unused images:
 
     `./cleanup.sh`
-
