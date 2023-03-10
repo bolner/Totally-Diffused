@@ -19,7 +19,7 @@ Do not delete the `.deb` file yet, because it can be used for the guest install 
 
 3. Clone this repository into a folder, and make sure that the files are owned by a non-root user.
 ```
-git clone git@github.com:bolner/Totally-Diffused.git
+git clone https://github.com/bolner/Totally-Diffused.git
 ```
 
 3. To avoid downloading the CUDA 11.7 driver again, create an `install` folder in the same directory as where this README file is located, and copy the `cuda-repo-debian11-11-7-local_11.7.0-515.43.# 04-1_amd64.deb` file there. (If you skip this, then it will be downloaded automatically.)
