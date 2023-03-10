@@ -47,3 +47,7 @@ When it is running, you can:
 - Delete the totally-diffused image, the container and do a global prune that deletes unused images:
 
     `./cleanup.sh`
+
+If you execute the `./run.sh` inside a `screen`, then you can disconnect and re-connect to it anytime, letting it running in the background.
+
+Just execute `apt-get install screen` as root to install that program, and start a new session with the `screen` command as the non-root user before executing `./run.sh`.
