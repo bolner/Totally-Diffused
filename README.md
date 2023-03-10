@@ -32,7 +32,7 @@ $ ./run.sh
 
 # Management
 
-The project folder is shared with the host, which allows easy access to models or training datasets. It is mapped to `/var/totally-diffused` inside the container. The AUTOMATIC1111 WebUI is also placed inside the project folder after installed, at `/var/totally-diffused/stable-diffusion-webui`.
+The project folder is shared with the guest, which allows easy access to models or training datasets. It is mapped to `/var/totally-diffused` inside the container. The AUTOMATIC1111 WebUI is also placed inside the project folder after installed, at `/var/totally-diffused/stable-diffusion-webui`.
 
 The container is always running. You can stop and start it with:
 ```
