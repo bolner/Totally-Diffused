@@ -1,5 +1,5 @@
 
-Debian/NVIDIA Docker image for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. Supports Dreambooth.
+Debian/NVIDIA Docker image for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. Supports Dreambooth. By default the application listens on port 7860, bound to all interfaces (0.0.0.0). You can avoid that by using the `./safe_run.sh` script.
 
 # Installation
 
@@ -42,6 +42,7 @@ docker container start totally-diffused
 
 When it is running, you can:
 - Start the UI: `./run.sh`
+- Start the UI without `--listen` and `--enable-insecure-extension-access`: `./safe_run.sh`
 - Login as non-root: `./login.sh`
 - Login as root: `./root_login.sh`
 - Delete the totally-diffused image, the container and do a global prune that deletes unused images:
