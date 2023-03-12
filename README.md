@@ -49,6 +49,19 @@ When it is running, you can:
 
     `./cleanup.sh`
 
+## About screen
+
 If you execute the `./run.sh` inside a `screen`, then you can disconnect and re-connect to it anytime, letting it running in the background.
 
 Just execute `apt-get install screen` as root to install that program, and start a new session with the `screen` command as the non-root user before executing `./run.sh`.
+
+## Updating the AUTOMATIC1111 web UI
+
+The GIT repository is checked out in detached HEAD state in order to only clone a specific version that is tested.
+If you would like to update AUTOMATIC1111 web UI to the newest version, then:
+
+- Enter the `stable-diffusion-webui` folder, and:
+    ```
+    git checkout master
+    git pull
+    ```

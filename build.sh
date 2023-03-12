@@ -70,7 +70,7 @@ if [ ! -f "stable-diffusion-webui/launch.py" ]; then
         ; cd ${WUI_DIR} \
         && git init \
         && git remote add origin https://github.com/AUTOMATIC1111/stable-diffusion-webui.git \
-        && git fetch --depth 1 origin 0cc0ee1bcb4c24a8c9715f66cede06601bfc00c8 \
+        && git fetch --depth 1 origin 27e319dc4f09a2f040043948e5c52965976f8491 \
         && git checkout FETCH_HEAD"
 fi
 
