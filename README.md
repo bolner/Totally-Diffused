@@ -1,6 +1,8 @@
 # Current version: [2023-06-05](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/baf6946e06249c5af9851c60171692c44ef633e0)
 
-Debian/NVIDIA Docker container for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. DreamBooth can be easily installed on the WebUI, because Totally-Diffused installs [xformers](https://github.com/facebookresearch/xformers) too. There are no error messages at startup. By default the application listens on port 7860, bound to all interfaces (0.0.0.0). You can avoid that by using the `./safe_run.sh` script.
+Debian/NVIDIA Docker container for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. Because updating old versions is impossible due to the Python dependency hell and the badly implemented virtual environment feature.
+
+There are no error messages at startup. By default the application listens on port 7860, bound to all interfaces (0.0.0.0). You can avoid that by using the `./safe_run.sh` script.
 
 # Installation
 
