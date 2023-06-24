@@ -1,9 +1,10 @@
+# Current version: [2023-06-05](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/baf6946e06249c5af9851c60171692c44ef633e0)
 
 Debian/NVIDIA Docker container for [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s Stable Diffusion application. DreamBooth can be easily installed on the WebUI, because Totally-Diffused installs [xformers](https://github.com/facebookresearch/xformers) too. There are no error messages at startup. By default the application listens on port 7860, bound to all interfaces (0.0.0.0). You can avoid that by using the `./safe_run.sh` script.
 
 # Installation
 
-1. Download and install this 11.7 CUDA driver on the host mashine. If you have newer version installed, then downgrade, because 11.7 is currently the only version which is supported by most libraries involved. Execute as root:
+1. Download and install this 11.7 CUDA driver on the host mashine. If you have newer version installed, then downgrade, because 11.7 is currently the only version which is supported by most libraries involved. Execute as root: (Only if your host is also a Debian, otherwise search for your own version.)
 ```
 # wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb
 # dpkg -i cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb

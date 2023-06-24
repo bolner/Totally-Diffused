@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install -y curl ca-certificates openssl net-tools \
     python3-dev git gnupg wget locales nano vim mc zip unzip jq \
     python3 python3-venv procps software-properties-common \
-    screen
+    screen google-perftools
 
 ARG CUDA_DEB=cuda-repo-debian11-11-7-local_11.7.0-515.43.04-1_amd64.deb
 COPY install/${CUDA_DEB} /root/${CUDA_DEB}

@@ -70,33 +70,12 @@ if [ ! -f "stable-diffusion-webui/launch.py" ]; then
         ; cd ${WUI_DIR} \
         && git init \
         && git remote add origin https://github.com/AUTOMATIC1111/stable-diffusion-webui.git \
-        && git fetch --depth 1 origin 27e319dc4f09a2f040043948e5c52965976f8491 \
+        && git fetch --depth 1 origin baf6946e06249c5af9851c60171692c44ef633e0 \
         && git checkout FETCH_HEAD"
 fi
 
 docker exec --user $(whoami) -it totally-diffused bash -c \
     "cd ${WUI_DIR} && ./webui.sh --exit"
-
-###################################################
-# DreamBooth
-###################################################
-
-# xformers 0.0.17.dev464 = github b89a4935c7dec6ecbfc565002c6f90189fafea8b
-# dreambooth = github 5be87ba63f62c228cf135425e21577f70c4e3351
-# tensorrt 8.5.3.1 = github b0c259a749aab1486ed3b4458e7176555b003497
-
-docker exec --user $(whoami) -it totally-diffused bash -c \
-    "cd ${WUI_DIR} \
-    && source ./venv/bin/activate \
-    ; pip install --no-input xformers==0.0.17.dev464 \
-    ; pip install --no-input tensorrt==8.5.3.1 \
-    ; ln -s ${PACK_DIR}/tensorrt/libnvinfer.so.8 \
-       ${PACK_DIR}/tensorrt/libnvinfer.so.7 2>/dev/null \
-    ; ln -s ${PACK_DIR}/tensorrt/libnvinfer_plugin.so.8 \
-       ${PACK_DIR}/tensorrt/libnvinfer_plugin.so.7 2>/dev/null"
-
-docker exec --user $(whoami) -it totally-diffused bash -c \
-    "printf '\n\nexport LD_LIBRARY_PATH=${PACK_DIR}/tensorrt/:/usr/local/cuda-11.7/targets/x86_64-linux/lib/\n' >> ~/.bashrc"
 
 ###################################################
 # other
